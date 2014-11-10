@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<link href="ztree.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="ztree.js"></script>
+	<title>ztree example</title>
+</head>
+<body>
+
+<pre>
+	/**
+	 * Custom links and icons
+	 * Check ztree for available icons.
+	 */
+	//new zTree(variable name, root id node);
+	var menu = new zTree('menu',0);
+	//menu.add(node id, parent id, name, url, url title, target [_blank|_parent|...], icon);
+	menu.add(0,-1,'Root');
+	menu.add(1,0,'my links','','','','folder-img');
+	menu.add(2,1,'Google','http://google.com','goto google!','_blank');
+	menu.add(3,0,'trash','','','','folder-music');
+	menu.add(4,3,'question','','','','question');
+	menu.add(5,0,'trash','','','','trash');
+	document.write(menu);
+</pre>
+
+<a href="javascript:menu.openAll()">Open</a> <a href="javascript:menu.closeAll()">Close</a>
+
+<script>
+	var menu = new zTree('menu',0);
+	menu.add(0,-1,'Root');
+	menu.add(1,0,'my links','','','','folder-img');
+	menu.add(2,1,'Google','http://google.com','goto google!','_blank');
+	menu.add(3,0,'trash','','','','folder-music');
+	menu.add(4,3,'question','','','','question');
+	menu.add(5,0,'trash','','','','trash');
+	document.write(menu);
+</script>
+
+</body>
+</html>

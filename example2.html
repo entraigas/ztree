@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<link href="ztree.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="ztree.js"></script>
+	<title>ztree example</title>
+</head>
+<body>
+
+<pre>
+	//use cookies example (press F5 to reload the page)
+	var config = {cookie:'myCookie'};
+	menu = new zTree('menu',0, config);
+	menu.add(0,-1,'Root');
+	menu.add(1,0,'node 1');
+	menu.add(2,0,'node 2');
+	menu.add(3,2,'node 3');
+	menu.add(4,1,'node 1.1');
+	menu.add(5,1,'node 1.2');
+	menu.add(6,4,'node 1.1.1');
+	document.write(menu);
+</pre>
+
+<a href="javascript:menu.openAll()">Open</a> <a href="javascript:menu.closeAll()">Close</a>
+
+<script>
+	var config = {cookie:'myCookie'};
+	menu = new zTree('menu',0, config);
+	menu.add(0,-1,'Root');
+	menu.add(1,0,'node 1');
+	menu.add(2,0,'node 2');
+	menu.add(3,2,'node 3');
+	menu.add(4,1,'node 1.1');
+	menu.add(5,1,'node 1.2');
+	menu.add(6,4,'node 1.1.1');
+	document.write(menu);
+</script>
+
+</body>
+</html>
